@@ -42,7 +42,7 @@ const Home = () => {
             <img
               src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=80"
               alt="Food"
-              className="rounded-2xl shadow-xl w-full max-w-md object-cover transition duration-500 hover:scale-105"
+              className="rounded-2xl shadow-xl w-full max-w-md object-cover "
             />
           </div>
         </div>
@@ -76,14 +76,14 @@ const Home = () => {
             ].map((restaurant, index) => (
               <div
                 key={index}
-                className="bg-white rounded-xl shadow-md transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 active:scale-95 overflow-hidden"
+                className="bg-white rounded-xl shadow-md overflow-hidden"
               >
                 <img
                   src={restaurant.img}
                   alt={restaurant.name}
-                  className="h-48 w-full object-cover transition duration-500 hover:scale-110"
+                  className="h-48 w-full object-cover transition duration-500 cursor-pointer hover:scale-110"
                 />
-                <div className="p-4">
+                <div className="p-6">
                   <h3 className="text-lg font-semibold text-gray-800">
                     {restaurant.name}
                   </h3>
@@ -138,14 +138,14 @@ const Home = () => {
             ].map((dish, index) => (
               <div
                 key={index}
-                className="bg-white rounded-xl shadow-md transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 active:scale-95 overflow-hidden"
+                className="bg-white rounded-xl shadow-md overflow-hidden"
               >
                 <img
                   src={dish.img}
                   alt={dish.name}
-                  className="h-40 w-full object-cover transition duration-500 hover:scale-110"
+                  className="h-48 w-full object-cover transition duration-500 hover:scale-110"
                 />
-                <div className="p-4">
+                <div className="p-6">
                   <h3 className="text-md font-semibold text-gray-800">
                     {dish.name}
                   </h3>
@@ -178,11 +178,18 @@ const Home = () => {
           </p>
 
           <Link
-            to="/restaurant"
-            className="inline-block mt-6 px-6 py-3 bg-white text-orange-600 font-semibold rounded-lg shadow-md transition-all duration-300 hover:-translate-y-1 active:scale-95 hover:shadow-xl"
-          >
-            Order Now
-          </Link>
+  to="/restaurant"
+  className="
+    inline-block mt-6 px-6 py-3 rounded-lg bg-white text-orange-600 font-semibold shadow-md
+    transform transition-all duration-300 ease-in-out
+    
+    hover:-translate-y-1 hover:shadow-xl
+    active:-translate-y-1 active:shadow-xl
+    focus:-translate-y-1 focus:shadow-xl
+  "
+>
+  Order Now
+</Link>
         </div>
       </section>
 
