@@ -3,29 +3,28 @@ import React from "react";
 import { Routes, Route } from "react-router-dom";
 
 // User Pages
-import Home from "../Pages/user/Home";
-import Restaurant from "../Pages/user/Restaurant";
-import Cart from "../Pages/user/Cart";
-import Checkout from "../Pages/user/Checkout";
-import Orders from "../Pages/user/Orders";
-
-// Admin Pages
-import Dashboard from "../Pages/admin/Dashboard";
-import AddItem from "../Pages/admin/AddItem";
-import ManageOrders from "../Pages/admin/ManageOrders";
-import ManageRestaurants from "../Pages/admin/ManageRestaurants";
+import Home from "../pages/Home";
+import Restaurant from "../pages/Restaurant";
+import Cart from "../pages/Cart";
+import Checkout from "../pages/Checkout";
+import Orders from "../pages/Orders";
+import Login from "../pages/Login";
+import Register from "../pages/Register";
 
 // Route Protection
 import ProtectedRoute from "./ProtectedRoute";
-import AdminRoute from "./AdminRoute";
 
-const AppRoute = () => {
+const AppRoutes = () => {
   return (
     <Routes>
-      {/* User Routes */}
+      {/* Public Routes */}
+      <Route path="/login" element={<Login />} />
+      <Route path="/register" element={<Register />} />
       <Route path="/" element={<Home />} />
       <Route path="/restaurant/:id" element={<Restaurant />} />
       <Route path="/cart" element={<Cart />} />
+
+      {/* Protected Routes */}
       <Route
         path="/checkout"
         element={
@@ -43,41 +42,10 @@ const AppRoute = () => {
         }
       />
 
-      {/* Admin Routes */}
-      <Route
-        path="/admin/dashboard"
-        element={
-          <AdminRoute>
-            <Dashboard />
-          </AdminRoute>
-        }
-      />
-      <Route
-        path="/admin/add-item"
-        element={
-          <AdminRoute>
-            <AddItem />
-          </AdminRoute>
-        }
-      />
-      <Route
-        path="/admin/manage-orders"
-        element={
-          <AdminRoute>
-            <ManageOrders />
-          </AdminRoute>
-        }
-      />
-      <Route
-        path="/admin/manage-restaurants"
-        element={
-          <AdminRoute>
-            <ManageRestaurants />
-          </AdminRoute>
-        }
-      />
+      {/* Fallback route */}
+      <Route path="*" element={<Home />} />
     </Routes>
   );
 };
 
-export default AppRoute;
+export default AppRoutes;
