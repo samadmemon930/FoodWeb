@@ -5,3 +5,38 @@ body {
   font-family: 'Montserrat', sans-serif;
   overflow-x: hidden;
 }
+
+/* NAVBAR LINK GLOBAL HOVER EFFECT */
+
+.nav-link {
+  position: relative;
+  color: #374151; /* gray-700 */
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background: #f97316; /* orange-500 */
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link:focus,
+.nav-link:active {
+  color: #ea580c; /* orange-600 */
+}
+
+.nav-link:hover::after,
+.nav-link:focus::after,
+.nav-link:active::after {
+  width: 100%;
+}
+
+
