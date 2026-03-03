@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-import Navbar from "../components/common/Navbar";
-import Footer from "../components/common/Footer";
 import RestaurantCard from "../Components/restaurant/RestaurantCard";
 import SearchBar from "../Components/restaurant/SearchBar";
 import FoodCard from "../Components/restaurant/FoodCard";
