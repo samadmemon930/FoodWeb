@@ -39,7 +39,8 @@ const Login = () => {
     try {
       const userCredential = await loginUser(email, password);
 
-      login(userCredential.user);
+      await loginUser(email, password);
+      navigate("/");
 
       Swal.fire({
         icon: "success",

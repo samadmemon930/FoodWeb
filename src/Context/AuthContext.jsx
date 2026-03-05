@@ -1,7 +1,8 @@
+// src/Context/AuthContext.jsx
 import React, { createContext, useState, useEffect } from "react";
 import { auth } from "../Services/FirebaseConfig";
 import { onAuthStateChanged, signOut } from "firebase/auth";
-import Loader from "../Components/common/Loader"; // import loader
+import Loader from "../Components/common/Loader";
 
 export const AuthContext = createContext();
 
@@ -20,8 +21,9 @@ const AuthProvider = ({ children }) => {
   const login = (userData) => setUser(userData);
 
   const logout = async () => {
-    await signOut(auth);
-    setUser(null);
+    await signOut(auth);            // Firebase logout
+    setUser(null);                  // React state reset
+    localStorage.removeItem("uid"); // Remove UID from localStorage
     alert("Logged out successfully!");
   };
 
