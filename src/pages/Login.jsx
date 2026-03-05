@@ -1,7 +1,7 @@
 // src/pages/Login.jsx
 import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
-import { useAuth } from "../hooks/UseAuth";
+import { useAuth } from "../hooks/useAuth";
 import { loginUser } from "../Services/AuthService";
 import Swal from "sweetalert2";
 import { Mail, Lock } from "lucide-react";

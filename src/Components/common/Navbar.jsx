@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { useAuth } from "../../hooks/UseAuth";
+import { useAuth } from "../../hooks/useAuth"
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
