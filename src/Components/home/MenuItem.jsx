@@ -33,13 +33,13 @@ const MenuItems = () => {
           {dishes.map((dish, index) => (
             <div
               key={index}
-              className="group bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-md transition-all duration-500 hover:shadow-2xl hover:-translate-y-2"
+              className="menu-card group bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-md"
             >
               <div className="relative overflow-hidden">
                 <img
                   src={dish.img}
                   alt={dish.name}
-                  className="h-52 w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                 className="menu-image h-52 w-full object-cover"
                 />
               </div>
 
@@ -52,12 +52,12 @@ const MenuItems = () => {
                   {dish.price}
                 </p>
 
-                <Link
-                  to="/restaurant"
-                  className="mt-4 inline-block w-full text-center py-2.5 rounded-xl bg-gradient-to-r from-orange-500 to-red-500 text-white text-sm font-medium shadow-md hover:shadow-xl hover:scale-105 transition-all"
-                >
-                  View Menu
-                </Link>
+                <button
+                    onClick={() => addToCart(dish)}
+                    className="menu-btn mt-4 w-full py-2.5 rounded-xl bg-gradient-to-r from-orange-500 to-red-500 text-white text-sm font-medium shadow-md"
+                  >
+                    Add to Cart
+                  </button>
               </div>
             </div>
           ))}

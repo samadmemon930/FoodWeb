@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { useAuth } from "../../hooks/useAuth";
+import { useAuth } from "../../hooks/UseAuth";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -34,7 +34,7 @@ const Navbar = () => {
                 <div key={link.name} className="relative group">
                   <Link
                     to={link.path}
-                    className="nav-link text-gray-700 text-[16px] font-medium transition-all duration-300"
+                    className="nav-link text-gray-700 text-md font-medium transition-all duration-300"
                   >
                     {link.name}
                   </Link>
@@ -54,7 +54,7 @@ const Navbar = () => {
                 className="relative flex items-center justify-center h-10 w-10 rounded-md transition-colors duration-300 text-gray-700 focus:outline-none focus:text-orange-600 group"
               >
                 <svg
-                  className="w-6 h-6 text-gray-700 transition-colors duration-300 group-hover:text-orange-600 group-focus:text-orange-600"
+                  className="w-7 h-7 text-gray-700 transition-colors duration-300 group-hover:text-orange-600 group-focus:text-orange-600"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -92,7 +92,7 @@ const Navbar = () => {
                 className="lg:hidden flex items-center justify-center h-10 w-10 rounded-md transition-colors duration-300 hover:text-orange-600 active:text-orange-600"
               >
                 <svg
-                  className="w-6 h-6 text-gray-700"
+                  className="w-7 h-7 text-gray-700"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"

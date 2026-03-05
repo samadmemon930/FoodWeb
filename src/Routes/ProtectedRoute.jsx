@@ -1,9 +1,14 @@
-import React from 'react'
+import React from "react";
+import { Navigate } from "react-router-dom";
+import { useAuth } from "../hooks/UseAuth";
 
-const ProtectedRoute = () => {
-  return (
-    <div>ProtectedRoute</div>
-  )
-}
+const ProtectedRoute = ({ children }) => {
+  const { user, loading } = useAuth();
 
-export default ProtectedRoute
+  if (loading) return <p>Loading...</p>; // optional loading screen
+  if (!user) return <Navigate to="/login" replace />;
+
+  return children;
+};
+
+export default ProtectedRoute;

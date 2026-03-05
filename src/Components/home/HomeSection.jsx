@@ -7,7 +7,7 @@ const HomeSection = () => {
 <>
       {/* HERO SECTION */}
       <section className="bg-gradient-to-r from-orange-50 to-red-50">
-        <div className="max-w-6xl mx-auto px-4 md:px-6 py-16 md:py-24 flex flex-col lg:flex-row items-center justify-between gap-10">
+        <div className="max-w-6xl mx-auto px-4 md:px-6 pt-36 pb-16 md:pb-24 flex flex-col lg:flex-row items-center justify-between gap-10">
           
           <div className="flex-1 text-center lg:text-left">
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight text-gray-800">

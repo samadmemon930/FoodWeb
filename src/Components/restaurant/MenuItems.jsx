@@ -33,13 +33,13 @@ const MenuItems = ({ search = "" }) => {
             filteredItems.map((dish) => (
               <div
                 key={dish.id}
-                className="group bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-md transition-all duration-500 hover:shadow-2xl hover:-translate-y-2"
+                className="menu-card group bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-md"
               >
                 <div className="relative overflow-hidden">
                   <img
                     src={dish.image}
                     alt={dish.name}
-                    className="h-52 w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                   className="menu-image h-52 w-full object-cover"
                   />
                 </div>
 
@@ -54,7 +54,7 @@ const MenuItems = ({ search = "" }) => {
 
                   <button
                     onClick={() => addToCart(dish)}
-                    className="mt-4 w-full py-2.5 rounded-xl bg-gradient-to-r from-orange-500 to-red-500 text-white text-sm font-medium shadow-md hover:shadow-xl hover:scale-105 transition-all"
+                    className="menu-btn mt-4 w-full py-2.5 rounded-xl bg-gradient-to-r from-orange-500 to-red-500 text-white text-sm font-medium shadow-md"
                   >
                     Add to Cart
                   </button>
