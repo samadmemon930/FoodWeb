@@ -132,14 +132,14 @@ const Navbar = () => {
                 {user ? (
                   <button
                     onClick={logout}
-                    className="h-full w-full px-4 py-2 rounded-lg bg-gradient-to-r from-orange-500 to-red-500 text-white text-md font-medium shadow-md transform transition duration-300 hover:scale-105 focus:scale-105 active:scale-105"
+                    className="h-full w-full px-4 py-2 text-center rounded-lg bg-gradient-to-r from-orange-500 to-red-500 text-white text-md font-medium shadow-md transform transition duration-300 hover:scale-105 focus:scale-105 active:scale-105"
                   >
                     Logout
                   </button>
                 ) : (
                   <Link
                     to="/login"
-                    className="h-full w-full px-4 flex items-center rounded-lg bg-gradient-to-r from-orange-500 to-red-500 text-white text-md font-medium shadow-md transform transition duration-300 hover:scale-105 focus:scale-105 active:scale-105"
+                    className="h-full w-full px-4 py-2 text-center flex items-center rounded-lg bg-gradient-to-r from-orange-500 to-red-500 text-white text-md font-medium shadow-md transform transition duration-300 hover:scale-105 focus:scale-105 active:scale-105"
                   >
                     Login
                   </Link>
