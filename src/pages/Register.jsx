@@ -20,6 +20,11 @@ const Register = () => {
         icon: "error",
         title: "All fields are required",
         text: "Please fill in all fields before continuing.",
+        confirmButtonColor: "#e74c3c",
+        customClass: {
+    title: "swal-title-small",
+    htmlContainer: "swal-text-small"
+  }
       });
       return;
     }
@@ -31,6 +36,11 @@ const Register = () => {
         icon: "error",
         title: "Invalid Email",
         text: "Please enter a valid email address.",
+        confirmButtonColor: "#e74c3c",
+        customClass: {
+    title: "swal-title-small",
+    htmlContainer: "swal-text-small"
+  }
       });
       return;
     }
@@ -41,6 +51,11 @@ const Register = () => {
         icon: "error",
         title: "Weak Password",
         text: "Password must be at least 8 characters long.",
+        confirmButtonColor: "#e74c3c",
+        customClass: {
+    title: "swal-title-small",
+    htmlContainer: "swal-text-small"
+  }
       });
       return;
     }
@@ -54,6 +69,10 @@ const Register = () => {
         title: "Account Created Successfully!",
         text: "Please login to continue.",
         confirmButtonColor: "#f97316",
+        customClass: {
+    title: "swal-title-small",
+    htmlContainer: "swal-text-small"
+  }
       }).then(() => {
         navigate("/login");
       });
@@ -64,6 +83,11 @@ const Register = () => {
         icon: "error",
         title: "Registration Failed",
         text: err.message,
+        confirmButtonColor: "#e74c3c",
+        customClass: {
+    title: "swal-title-small",
+    htmlContainer: "swal-text-small"
+  }
       });
     }
   };
@@ -74,7 +98,7 @@ const Register = () => {
       {/* LOGO */}
       <Link
         to="/"
-        className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent mb-10"
+        className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent mb-8"
       >
         FoodExpress
       </Link>
@@ -85,7 +109,7 @@ const Register = () => {
         className="bg-white w-full max-w-md p-8 md:p-10 rounded-2xl shadow-2xl border border-gray-100"
       >
         {/* Heading */}
-        <h2 className="text-2xl md:text-3xl font-semibold text-gray-800 mb-6">
+        <h2 className="text-2xl md:text-3xl font-semibold text-gray-800 mb-6 text-center">
           Create Account
         </h2>
 

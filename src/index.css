@@ -39,6 +39,26 @@ body {
   width: 100%;
 }
 
+/* SweetAlert responsive text */
+
+.swal-title-small {
+  font-size: 22px;
+}
+
+.swal-text-small {
+  font-size: 16px;
+}
+
+@media (min-width: 640px) {
+  .swal-title-small {
+    font-size: 30px;
+  }
+
+  .swal-text-small {
+    font-size: 18px;
+  }
+}
+
 
 /* ================= MENU CARD HOVER ================= */
 

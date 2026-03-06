@@ -1,7 +1,9 @@
-// src/Services/FirebaseConfig.jsx
-
 import { initializeApp } from "firebase/app";
-import { getAuth, setPersistence, browserLocalPersistence } from "firebase/auth";
+import { 
+  getAuth,
+  setPersistence,
+  indexedDBLocalPersistence
+} from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
@@ -18,7 +20,7 @@ const app = initializeApp(firebaseConfig);
 export const auth = getAuth(app);
 export const db = getFirestore(app);
 
-// ⭐ login refresh ke baad bhi rahega
-setPersistence(auth, browserLocalPersistence);
+// ⭐ Force IndexedDB persistence
+setPersistence(auth, indexedDBLocalPersistence);
 
 export default app;
